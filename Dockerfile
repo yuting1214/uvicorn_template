@@ -15,4 +15,4 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Command to run the uvicorn server
-CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8010}
+CMD uvicorn app:app --host 0.0.0.0 --port ${PORT}
