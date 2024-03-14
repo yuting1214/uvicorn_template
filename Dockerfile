@@ -14,8 +14,5 @@ RUN pip install -r requirements.txt
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Expose the port uvicorn will run on
-EXPOSE 8010
-
 # Command to run the uvicorn server
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8010"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "${PORT}"]
